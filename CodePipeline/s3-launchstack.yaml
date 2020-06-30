@@ -112,7 +112,7 @@ Resources:
                 OAuthToken: !Ref 'GitHubToken'
               OutputArtifacts:
                 - Name: src
-              RunOrder: '1'
+              RunOrder: 1
         - Name: Build_and_Train
           Actions:
             - Name: CopyToS3
@@ -125,7 +125,7 @@ Resources:
                 ProjectName: !Ref CodeBuildDeploySite
               InputArtifacts:
                 - Name: src
-              RunOrder: '1'
+              RunOrder: 1
  
   CFNRole:
     Type: AWS::IAM::Role
